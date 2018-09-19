@@ -16,6 +16,10 @@ service:
   hello3:
     uri: hello3
 
+feign:
+  hystrix:
+    enabled: true
+
 eureka:
   client:
     service-url:
