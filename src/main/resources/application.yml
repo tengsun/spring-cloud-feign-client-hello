@@ -9,6 +9,12 @@ service:
   hello:
     name: HELLO-SERVICE
     uri: hello
+  hello1:
+    uri: hello1
+  hello2:
+    uri: hello2
+  hello3:
+    uri: hello3
 
 eureka:
   client:

@@ -16,4 +16,14 @@ public class DemoFeignClientController {
 		return clientAgent.helloFeign();
 	}
 	
+	@RequestMapping(value = "/hello-feign2", method = RequestMethod.GET)
+	public String helloClient2() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(clientAgent.helloFeign()).append("<br>");
+		sb.append(clientAgent.helloFeign("Jack")).append("<br>");
+		sb.append(clientAgent.helloFeign("Kate", 30)).append("<br>");
+		sb.append(clientAgent.helloFeign(new DemoUser("Rose", 28)));
+		return sb.toString();
+	}
+	
 }
